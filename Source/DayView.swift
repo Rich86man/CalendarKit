@@ -87,6 +87,14 @@ public class DayView: UIView {
     timelinePager.reusableViews.forEach{self.updateTimeline($0.timeline)}
   }
 
+  public func scrollToNow() {
+	let currentScrollView = timelinePager.reusableViews[1]
+	let nowOrigin = currentScrollView.timeline.nowOrigin
+	let newOrigin = nowOrigin.y - (currentScrollView.frame.size.height / 2)
+    currentScrollView.contentOffset = CGPoint(x: 0.0, y: newOrigin)
+	timelineSynchronizer?.scrollViewDidScroll(currentScrollView)
+  }
+
   override public func layoutSubviews() {
     dayHeaderView.anchorAndFillEdge(.top, xPad: 0, yPad: 0, otherSize: headerHeight)
     timelinePager.alignAndFill(align: .underCentered, relativeTo: dayHeaderView, padding: 0)

@@ -230,6 +230,10 @@ public class TimelineView: UIView, ReusableView {
 
   // MARK: - Helpers
 
+  var nowOrigin: CGPoint {
+	return CGPoint(x: 0, y: dateToY(Date()))
+  }
+
   fileprivate var onePixel: CGFloat {
     return 1 / UIScreen.main.scale
   }
