@@ -43,4 +43,8 @@ extension DayViewController: DayViewDataSource {
   open func dayViewDidLongPressEventView(_ eventView: EventView) {
     
   }
+
+  open func dayViewDidUpdateCurrent(date: Date) {
+
+  }
 }
