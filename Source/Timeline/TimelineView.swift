@@ -168,7 +168,7 @@ public class TimelineView: UIView, ReusableView {
       bringSubview(toFront: nowLine)
       nowLine.alpha = 1
       let size = CGSize(width: bounds.size.width, height: 20)
-      let rect = CGRect(origin: CGPoint.zero, size: size)
+      let rect = CGRect(origin: CGPoint(x: 10, y: 0), size: size)
       nowLine.date = currentTime
       nowLine.frame = rect
       nowLine.center.y = dateToY(currentTime)
