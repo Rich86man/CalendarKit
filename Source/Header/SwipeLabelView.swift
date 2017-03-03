@@ -11,15 +11,15 @@ class SwipeLabelView: UIView {
       animate(shouldMoveForward)
     }
   }
-  
+
   var firstLabel: UILabel {
     return labels.first!
   }
-  
+
   var secondLabel: UILabel {
     return labels.last!
   }
-  
+
   var labels = [UILabel]()
 
   var style = SwipeLabelStyle()
@@ -49,6 +49,10 @@ class SwipeLabelView: UIView {
       addSubview(label)
     }
     updateStyle(style)
+    backgroundColor = #colorLiteral(red: 0.5647058824, green: 0.6196078431, blue: 0.6549019608, alpha: 1)
+    labels.forEach { (label) in
+        label.textColor = .white
+    }
   }
 
   func updateStyle(_ newStyle: SwipeLabelStyle) {
