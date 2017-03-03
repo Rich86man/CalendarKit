@@ -50,15 +50,12 @@ class SwipeLabelView: UIView {
     }
     updateStyle(style)
     backgroundColor = #colorLiteral(red: 0.5647058824, green: 0.6196078431, blue: 0.6549019608, alpha: 1)
-    labels.forEach { (label) in
-        label.textColor = .white
-    }
   }
 
   func updateStyle(_ newStyle: SwipeLabelStyle) {
     style = newStyle
     labels.forEach { label in
-      label.textColor = style.textColor
+      label.textColor = .white
     }
   }
 
@@ -78,7 +75,7 @@ class SwipeLabelView: UIView {
       self.firstLabel.alpha = 0
       }, completion: { _ in
         self.labels = self.labels.reversed()
-    }) 
+    })
   }
 
   override func layoutSubviews() {
