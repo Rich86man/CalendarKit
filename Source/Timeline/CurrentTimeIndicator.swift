@@ -63,11 +63,11 @@ class CurrentTimeIndicator: UIView {
   func updateTimeLabel() {
 	switch style.timeFormat {
 	case .twentyFourHour :
-		timeLabel.text = date.format(with: "HH:mm")
+		timeLabel.text = date.format(with: "H:mm")
 	case .twelveHour :
 		timeLabel.text = date.format(with: "h:mm a")
 	case .system :
-		timeLabel.text = date.format(with: "hh:mm a")
+		timeLabel.text = date.format(with: "h:mm a")
 	}
 	timeLabel.sizeToFit()
 	setNeedsLayout()
