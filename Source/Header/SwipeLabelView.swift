@@ -49,13 +49,13 @@ class SwipeLabelView: UIView {
       addSubview(label)
     }
     updateStyle(style)
-    backgroundColor = #colorLiteral(red: 0.5647058824, green: 0.6196078431, blue: 0.6549019608, alpha: 1)
+    backgroundColor = #colorLiteral(red: 0.9294117647, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
   }
 
   func updateStyle(_ newStyle: SwipeLabelStyle) {
     style = newStyle
     labels.forEach { label in
-      label.textColor = .white
+      label.textColor = .black
     }
   }
 
