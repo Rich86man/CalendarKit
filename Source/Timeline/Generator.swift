@@ -36,7 +36,7 @@ struct Generator {
   static func timeStringsSystem() -> [String] {
     let start = Date().start(of: .day)
     let fullDay = 0...24
-    return fullDay.map({ start + $0.hours }).map({ $0.format(with: "hh:mm a")! })
+    return fullDay.map({ start + $0.hours }).map({ $0.format(with: "hh:mm a") })
   }
 
 }
